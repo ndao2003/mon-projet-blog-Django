@@ -1,9 +1,11 @@
 /* styles.css */
 
 /* Style global */
+* {
+    padding : 0px ;
+    margin : 0px;
+}
 body {
-            
-
             background-image: url('/static/images/blog.jpg');
             background-size: cover; /* Ajuste l'image pour couvrir tout l'arrière-plan */
             background-repeat: no-repeat; /* Empêche la répétition de l'image */
@@ -18,7 +20,7 @@ body {
             text-align: center;
         }
         
-        header h1 {
+        header .nav-link {
             font-size: 2.5em;
             margin: 0;
         }
@@ -33,6 +35,7 @@ body {
             margin: 0 15px;
             text-decoration: none;
             font-size: 1.1em;
+            text-color : white ;
         }
         
         nav a:hover {

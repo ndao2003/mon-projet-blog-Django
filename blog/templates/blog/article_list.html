@@ -2,10 +2,10 @@
 
 
 {% block content %}
-  <h1>Liste des articles</h1>
+  <h3>Liste des articles</h3>
   {% for article in articles %}
     <div>
-      <h2><a href="{% url 'article_detail' article.pk %}">{{ article.titre }}</a></h2>
+      <h4><a href="{% url 'article_detail' article.pk %}">{{ article.titre }}</a></h4>
       <p>Publié le {{ article.date_publication|date:"d M Y" }} par {{ article.auteur }}</p>
       <a href="{% url 'article_edit' article.pk %}">Modifier</a>
       <a href="{% url 'article_delete' article.pk %}">Supprimer</a>
