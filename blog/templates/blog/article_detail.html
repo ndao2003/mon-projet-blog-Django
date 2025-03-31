@@ -1,0 +1,12 @@
+{% extends "blog/base.html" %}
+
+
+{% block content %}
+  <h1>{{ article.titre }}</h1>
+  <p>Publié le {{ article.date_publication|date:"d M Y" }} par {{ article.auteur }}</p>
+  {% if article.image %}
+    <img src="{{ article.image.url }}" alt="Image de l'article">
+  {% endif %}
+  <p>{{ article.contenu }}</p>
+  <a href="{% url 'article_list' %}">Retour à la liste</a>
+{% endblock %}
